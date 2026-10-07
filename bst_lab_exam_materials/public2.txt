@@ -1,0 +1,13 @@
+I 50
+I 30
+I 70
+I 20
+I 40
+I 60
+I 80
+D 50
+H
+N
+IN
+PRE
+POST
