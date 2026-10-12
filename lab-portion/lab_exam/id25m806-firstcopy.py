@@ -4,6 +4,7 @@ class Node:
 
     def __init__(self, val = None):
         if val is None:
+            
             self.val = None
             self.left = None
             self.right = None
