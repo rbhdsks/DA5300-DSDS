@@ -1,0 +1,9 @@
+# Personal VS Code workspaces
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS folder preferences
+.DS_Store
