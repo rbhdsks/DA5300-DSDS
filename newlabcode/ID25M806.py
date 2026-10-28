@@ -36,30 +36,32 @@ class BST:
 #         elif node.key is None and node.key is None:
 #             return 
         else:
-            while node.left and node.right is None:
+            # while node.left and node.right is None:
 #             if node.left is None and node.right is None:
 #                 return 
 
-                if node.left is None:
+            if node.left is None:
                  return node.right
-                if node.right is None:
+            if node.right is None:
                  return node.left
-            if node.left is None and node.right is None:
-                return 
-            else:
-                succ=self._minimum_value_node(node.right)
-                node.key=succ.key
-                node.right=self._delete(node.right,succ.key)
-        return
-    def _minimum_value_node(self,node):
-        current= node
-        while current.left is not None:
-            current=current.left
-        return current
+            # if node.left is None and node.right is None:
+            #     return 
+            # else:
+            succ=self._minimum_value_node(node.right)
+            while succ.left is not None:
+                succ = succ.left
+            node.key=succ.key
+            node.right=self._delete(node.right,succ.key)
+        return node
+    # def _minimum_value_node(self,node):
+    #     current= node
+    #     while current.left is not None:
+    #         current=current.left
+    #     return current
             
             
-        # TODO: implement deletion
-        # pass
+    #     # TODO: implement deletion
+    #     # pass
 
     def height(self):
         return self._height(self.root)
@@ -69,6 +71,7 @@ class BST:
         left_node = self._height(node.left)
         right_node = self._height(node.right)
         return 1 + max(left_node,right_node)
+        # return 1 + max(self._height(node.right)
         
         # TODO: implement height
         # Height is measured in edges. Empty tree = -1.
