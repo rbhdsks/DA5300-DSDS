@@ -1,0 +1,11 @@
+0 3 4 5
+INF INF INF 0
+0 3 4 5
+INF 0 1 2
+INF INF 0 1
+INF INF INF 0
+7 0
+0 INF
+0 INF
+7 0
+False
